@@ -324,25 +324,6 @@ Final cleaned and deduplicated dataset containing **1,988 symptom descriptions**
 
 Earlier exploratory work covering preprocessing and word-embedding experiments.
 
----
-
-## Reproducibility Note
-
-The saved notebook outputs contain the reported experiments, but the current source of `Phase_1_&_2.ipynb` is not completely clean-run ready.
-
-The transformer section references a `transformer_text` column that is not created in the preceding saved cell.
-
-It should be created before the transformer split, for example:
-
-```python
-phase2_data["transformer_text"] = phase2_data["clean_input"]
-```
-
-The notebook also contains a stored `FileNotFoundError` from a Google Colab session where `data.csv` was not available in the runtime working directory.
-
-These issues do not change the recorded experiment results, but they should be fixed before claiming complete one-click reproducibility.
-
----
 
 ## Disclaimer
 
